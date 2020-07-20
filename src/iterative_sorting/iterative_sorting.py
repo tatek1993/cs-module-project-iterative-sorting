@@ -18,8 +18,13 @@ def selection_sort(arr):
         # TO-DO: swap
         # Your code here
         # swap the values of that current array and the smallest index
-        temp_hold = arr[x]
-        arr[x] = arr[smallest_index]
+        # temporarily hold the value of the current index
+        temp_hold = arr[i]
+
+        # assign the value of the smallest_index to the current index
+        arr[i] = arr[smallest_index]
+
+        # assign the value of the temp_hold to the smallest_index
         arr[smallest_index] = temp_hold
     return arr
 
@@ -27,6 +32,20 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
+
+    # items swapped
+    swapped = 0
+
+    while swapped != len(arr):
+        # in the range of the length of our array. We want to go through the list as many times as there are elements in the list. We deincrement that length for each item that is swapped
+        for i in range(0, len(arr) - swapped - 1):
+            # if the current index in the array is greater than the next
+            if arr[i] > arr[i + 1]:
+                # swap them
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+
+        # increment swapped
+        swapped += 1
 
     return arr
 
