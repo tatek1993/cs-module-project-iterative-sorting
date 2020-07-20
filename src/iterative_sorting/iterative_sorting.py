@@ -36,8 +36,9 @@ def bubble_sort(arr):
     # items swapped
     swapped = 0
 
+    # as long as swapped is less than the length of the array
     while swapped != len(arr):
-        # in the range of the length of our array. We want to go through the list as many times as there are elements in the list. We deincrement that length for each item that is swapped
+        # in the range of the length of our array. We want to go through the list as many times as there are elements in the list. We decrement that length for each item that is swapped
         for i in range(0, len(arr) - swapped - 1):
             # if the current index in the array is greater than the next
             if arr[i] > arr[i + 1]:
