@@ -8,10 +8,19 @@ def selection_sort(arr):
         # (hint, can do in 3 loc)
         # Your code here
 
+        # for each item in the entire length of the array, starting at i +1
+        for x in range(cur_index + 1, len(arr)):
+            # if the current index is less than the smallest index
+            if arr[x] < arr[smallest_index]:
+                #set the smallest index to that current array
+                smallest_index = x
 
         # TO-DO: swap
         # Your code here
-
+        # swap the values of that current array and the smallest index
+        temp_hold = arr[x]
+        arr[x] = arr[smallest_index]
+        arr[smallest_index] = temp_hold
     return arr
 
 
@@ -19,8 +28,8 @@ def selection_sort(arr):
 def bubble_sort(arr):
     # Your code here
 
-
     return arr
+
 
 '''
 STRETCH: implement the Counting Sort function below
@@ -39,8 +48,9 @@ buckets.
 
 What is the time and space complexity of the counting sort algorithm?
 '''
+
+
 def counting_sort(arr, maximum=None):
     # Your code here
-
 
     return arr
